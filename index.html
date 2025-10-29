@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerte Sécurité - Poste Flaggué</title>
+    <link rel="stylesheet" href="flag_style.css"> 
+</head>
+<body id="bodyFlag">
+
+    <div id="erreur-box">
+        <div class="header">
+            <span class="icon">⚠️</span>
+            <span class="title">🔐 Alerte de Sécurité - Poste Flaggué</span>
+        </div>
+        
+        <div class="content">
+            <p><strong>ATTENTION : Votre poste a été "Flaggué" !</strong></p>
+            <p>Vous avez oublié de **verrouiller votre session**.</p>
+            <p>Un collègue vigilant a marqué cette faille dans votre hygiène informatique.</p>
+            <p class="instruction">Pour débloquer et retourner à votre travail, vous devez entrer le **code secret** communiqué par le "Flagger".</p>
+            
+            <input type="password" id="codeInput" placeholder="Entrez le code de déblocage ici..." autofocus>
+            
+            <button onclick="checkCode()">DÉVERROUILLER LE POSTE</button>
+            
+            <p class="note">Cet exercice fait partie de notre programme de sensibilisation. Pensez à votre **récompense** si vous êtes le Flagger !</p>
+        </div>
+    </div>
+    
+    <script src="flag_script.js"></script> 
+
+</body>
+</html>
