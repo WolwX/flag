@@ -1,0 +1,190 @@
+#custom-message {
+    margin-bottom: 0.7vw;
+}
+/* Emoji drapeau rouge à côté du mot Flag */
+.red-flag-emoji {
+    font-size: 1.2em;
+    vertical-align: middle;
+    color: #e53935;
+    margin-left: 0.15em;
+    filter: drop-shadow(0 0 1px #fff);
+}
+/* Ligne horizontale pour 100% achevés + champ code + bouton */
+.footer-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 0;
+    gap: 1.5vw;
+}
+
+.completion-text {
+    font-size: 1.05vw;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    white-space: nowrap;
+}
+/* Ligne info-row en 2 colonnes : 100% achevés à gauche, QR code + texte à droite */
+.info-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1.2vw;
+    margin-bottom: 0;
+}
+
+.qr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+}
+
+/* Nettoyage : suppression des doublons et erreurs de syntaxe */
+/* Style de base pour l'effet BSoD (Écran Bleu de la Mort) */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0078D7;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-left: 7vw;
+    padding-top: 7vh;
+    box-sizing: border-box;
+}
+
+/* Conteneur principal blanc centré */
+/* Suppression du conteneur blanc, retour au style plein écran bleu */
+
+/* Le smiley triste :) */
+.smiley {
+    font-size: 8vw;
+    font-weight: 200;
+    margin-bottom: 2vw;
+    color: #fff;
+    user-select: none;
+    text-align: left;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2vw;
+    line-height: 1.2;
+    text-align: left;
+    color: #fff;
+}
+
+/* Contenu des paragraphes */
+.content p {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 1.2vw;
+    font-weight: 300;
+    max-width: 700px;
+    text-align: left;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------ */
+/* MODIF 2 : ZONE DE SAISIE CENTRÉE EN BAS DE PAGE */
+/* ------------------------------------------------------------------ */
+.footer-input-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2vw 0 0 0;
+    gap: 10px;
+}
+
+/* Champ de saisie */
+#codeInput {
+    padding: 10px;
+    width: 220px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1vw;
+    color: #222;
+    background: #fff;
+    outline: none;
+}
+
+/* Bouton de validation */
+button {
+    padding: 10px 22px;
+    background-color: #fff;
+    color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6e6e6;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* MODIF 3 : ZONE D'INFORMATION (QR Code) */
+/* ------------------------------------------------------------------ */
+
+.info-area {
+    margin-top: 2.5vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.qr-code {
+    width: 7vw;
+    height: 7vw;
+    min-width: 90px;
+    min-height: 90px;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 0;
+    flex-shrink: 0;
+    border-radius: 0;
+    background: none;
+    border: none;
+}
+
+/* Conteneur pour les lignes de texte à côté du QR Code */
+.stop-code {
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -5vw;
+    color: #fff;
+}
+
+/* Cibler le paragraphe et résoudre la superposition */
+.stop-code p {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    text-align: left;
+}

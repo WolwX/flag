@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerte Sécurité - Poste Flaggué</title>
-    <link rel="stylesheet" href="flag_style.css"> 
+    <title>Erreur Critique de Sécurité</title>
+    <link rel="stylesheet" href="css/flag_style.css"> 
 </head>
 <body id="bodyFlag">
-
-    <div id="erreur-box">
-        <div class="header">
-            <span class="icon">⚠️</span>
-            <span class="title">🔐 Alerte de Sécurité - Poste Flaggué</span>
-        </div>
-        
+    <div class="bsod-box">
+        <div class="smiley">:(</div>
+        <h1>Votre ordinateur a rencontré un problème de sécurité et doit être débloqué.</h1>
         <div class="content">
-            <p><strong>ATTENTION : Votre poste a été "Flaggué" !</strong></p>
-            <p>Vous avez oublié de **verrouiller votre session**.</p>
-            <p>Un collègue vigilant a marqué cette faille dans votre hygiène informatique.</p>
-            <p class="instruction">Pour débloquer et retourner à votre travail, vous devez entrer le **code secret** communiqué par le "Flagger".</p>
-            
-            <input type="password" id="codeInput" placeholder="Entrez le code de déblocage ici..." autofocus>
-            
-            <button onclick="checkCode()">DÉVERROUILLER LE POSTE</button>
-            
-            <p class="note">Cet exercice fait partie de notre programme de sensibilisation. Pensez à votre **récompense** si vous êtes le Flagger !</p>
+            <p>
+                Votre session n'a pas été verrouillée. Un collègue vigilant a placé un <b>Flag <span class="red-flag-emoji">🚩</span></b> sur votre poste. Ceci est un exercice de sensibilisation.
+            </p>
+            <p id="custom-message">
+                Pour débloquer, entrez le code de sécurité communiqué par votre collègue.
+            </p>
+        </div>
+        <div class="footer-row">
+            <div class="completion-text">100% achevés</div>
+            <div class="footer-input-area">
+                <input type="password" id="codeInput" placeholder="Code de sécurité..." autofocus>
+                <button onclick="checkCode()">DÉBLOQUER</button>
+            </div>
+        </div>
+        <div class="info-area">
+            <div class="qr-block">
+                <img src="img/qr_code.png" alt="QR Code" class="qr-code">
+            </div>
+            <div class="stop-code">
+                <p>
+                    Pour plus d'informations sur les bonnes pratiques de sécurité, scannez le code.<br>
+                    Code de défaillance : <b>OBLI_VERROUILLAGE</b>
+                </p>
+            </div>
         </div>
     </div>
-    
-    <script src="flag_script.js"></script> 
-
+    <script src="js/flag_script.js"></script> 
 </body>
 </html>
