@@ -1,0 +1,72 @@
+# FLAG - CONTEXTE PROJET (Pour l'Assistance IA)
+
+## 📍 SOURCE OFFICIELLE
+**Dépôt** : https://github.com/WolwX/flag
+
+> ⚠️ **IMPORTANT** : Ce document définit les objectifs et le design final.
+
+---
+
+## ⚡ INFOS RAPIDES
+
+- **Nom** : Flag (ou Croissantage BSoD)
+- **Type** : Outil de sensibilisation à la sécurité informatique
+- **Tech** : HTML / CSS / JS (Client léger) + Python / Flask (Backend API simple)
+- **Version actuelle** : v0.2.1.20251030 (Front-end validé, design BSoD conforme)
+- **Phase** : Finalisation du Front-end et implémentation du Backend.
+- **Objectif** : Simuler un Écran Bleu de la Mort (BSoD) pour piéger les collègues qui laissent leur session ouverte.
+- **Développeur** : (Votre Nom / Alias)
+- **Assistance IA** : Gemini
+
+---
+
+## 📋 ÉTAT ACTUEL (Résumé)
+
+**Version** : 0.2.1.20251030 - Front-end validé, design BSoD conforme
+
+**Avancement** :
+- ✅ Design BSoD (Bleu) implémenté en CSS.
+- ✅ Structure HTML complète et validée.
+- ✅ Correction des problèmes de superposition et d'alignement (smiley, champ de saisie centré en bas).
+- ⏳ Fonctionnalité JS de base (lecture de l'URL et validation du code) à finaliser.
+- ⏳ Implémentation du Backend (Flask/Python) pour l'enregistrement des 'Flags' et la vérification du code.
+
+**Fichiers du projet** :
+1. **index.html** : Structure de la page.
+2. **css/flag_style.css** : Styles (BSoD, responsive, positionnement).
+3. **js/flag_script.js** : Logique client (URL, full-screen, envoi des données).
+4. **app.py** (à créer) : Backend Flask pour l'API.
+
+---
+
+## 🎨 DESIGN & OBJECTIFS CLÉS
+
+### Thème Visuel
+- **Inspiration** : Écran Bleu de la Mort (BSoD) de Windows 10/11.
+- **Couleur Primaire** : Bleu Windows (`#0078D7`).
+- **Typographie** : Claire, moderne (simulant 'Segoe UI').
+
+### Éléments d'Interface (Front-end)
+- **Smiley Triste** : `:( ` (Grand, en haut à gauche).
+- **Zone d'information (QR Code)** : Positionnée en bas à gauche, avec alignement strict pour éviter la superposition.
+- **Champ de Saisie** : Positionné et centré en bas de l'écran, pour saisir le "Code de sécurité".
+
+### Logique Fonctionnelle (Backend à venir)
+- **URL de Flag** : La page doit accepter des paramètres dans l'URL (`?user=X&msg=Y`) pour personnaliser le piège.
+- **Enregistrement** : Le Backend doit enregistrer l'événement ("Flag") incluant l'heure, l'utilisateur piégé, et l'utilisateur qui a posé le Flag.
+- **Déblocage** : Un code secret doit être vérifié via une API pour débloquer la page.
+
+---
+
+## 🤖 INSTRUCTIONS POUR L'IA
+
+**Workflow systématique** :
+1. Lire ce `PROJECT_CONTEXT.txt` pour la vision globale.
+2. Consulter le `PROJECT_REFERENCE.txt` pour les conventions.
+3. Procéder à la tâche demandée.
+
+**Phase Actuelle** : Développement du **Backend (Python/Flask)** et finalisation du **`js/flag_script.js`**.
+
+**Priorités** :
+1. Finaliser le script **`flag_script.js`** pour l'envoi des données au backend.
+2. Créer l'application **`app.py`** (Flask) avec un point de terminaison de réception des Flags.

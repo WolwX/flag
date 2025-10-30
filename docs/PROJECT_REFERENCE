@@ -1,0 +1,38 @@
+FLAG - DOCUMENT DE RÉFÉRENCE PROJET
+====================================
+
+INFORMATIONS GÉNÉRALES
+----------------------
+- Nom du projet : Flag (Outil de sensibilisation)
+- Technologie Front : HTML5 / CSS3 / JavaScript (Vanilla)
+- Technologie Back : Python / Flask (Léger et rapide)
+- Version actuelle : v0.2.1.20251030 (Front-end validé, design BSoD conforme)
+- Objectif : Piéger les collègues ayant une session ouverte (Code de sécurité/Croissant).
+- **Dépôt GitHub** : https://github.com/WolwX/flag
+
+STRUCTURE DES FICHIERS
+----------------------
+/flag/
+├── index.html
+├── app.py                      # Backend Python/Flask
+├── css/
+│   └── flag_style.css          # Styles BSoD
+├── js/
+│   └── flag_script.js          # Logique client
+└── img/
+    └── qr_code.png             # QR Code (pour la blague ou la sensibilisation)
+
+CONVENTIONS & CHEMINS
+---------------------
+- **Endpoint API (Prévu)** : POST vers `/api/flag` pour enregistrer l'événement.
+- **Code de déblocage (Prévu)** : Vérification via POST vers `/api/check_code`.
+- **Paramètres URL** :
+    - `?user=paul` : Utilisateur piégé (pour le logging).
+    - `&flagger=marie` : Utilisateur qui a posé le Flag.
+    - `&msg=message_perso` : Message affiché à la place du message de déblocage.
+- **Design** : Respecter l'alignement précis du BSoD, notamment pour les petits écrans (`vw` pour les polices).
+
+PROCHAINE ÉTAPE
+---------------
+1. Implémenter le Backend Flask (`app.py`).
+2. Mettre à jour le JavaScript (`js/flag_script.js`) pour la communication avec Flask.
