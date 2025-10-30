@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="css/flag_style.css"> 
 </head>
 <body id="bodyFlag">
-    <div class="bsod-box">
-        <div class="smiley">:(</div>
-        <h1>Votre ordinateur a rencontré un problème de sécurité et doit être débloqué.</h1>
-        <div class="content">
-            <p>
-                Votre session n'a pas été verrouillée. Un collègue vigilant a placé un <b>Flag <span class="red-flag-emoji">🚩</span></b> sur votre poste. Ceci est un exercice de sensibilisation.
-            </p>
-            <p id="custom-message">
-                Pour débloquer, entrez le code de sécurité communiqué par votre collègue.
-            </p>
-        </div>
-        <div class="footer-row">
-            <div class="completion-text">100% achevés</div>
-            <div class="footer-input-area">
-                <input type="password" id="codeInput" placeholder="Code de sécurité..." autofocus>
-                <button onclick="checkCode()">DÉBLOQUER</button>
-            </div>
-        </div>
-        <div class="info-area">
-            <div class="qr-block">
-                <img src="img/qr_code.png" alt="QR Code" class="qr-code">
-            </div>
-            <div class="stop-code">
+    <div class="bsod-container">
+        <div class="bsod-box-left">
+            <div class="smiley">:(</div>
+            <div class="main-message">
                 <p>
-                    Pour plus d'informations sur les bonnes pratiques de sécurité, scannez le code.<br>
-                    Code de défaillance : <b>OBLI_VERROUILLAGE</b>
+                    Votre ordinateur a rencontré un problème de sécurité et doit être débloqué.<br>
+                    <span class="secondary-message">Votre session n'a pas été verrouillée. Un collègue vigilant a placé un <b>Flag <span class="red-flag-emoji">🚩</span></b> sur votre poste. Ceci est un exercice de sensibilisation.<br>
+                    Pour débloquer, entrez le code de sécurité communiqué par votre collègue.</span>
                 </p>
             </div>
+            <div class="footer-row">
+                <div class="footer-left">
+                    <span class="completion-text">100% achevés</span>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-inline">
+                        <input type="password" id="codeInput" placeholder="Code de sécurité..." autofocus>
+                        <button onclick="checkCode()">DÉBLOQUER</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info-area">
+                <div class="qr-block">
+                    <img src="img/qr_code.png" alt="QR Code" class="qr-code">
+                </div>
+                <div class="stop-code">
+                    <p>
+                        Pour plus d'informations sur les bonnes pratiques de sécurité, scannez le code.<br>
+                        Code de défaillance : <b>OBLI_VERROUILLAGE</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bsod-box-right">
+            <!-- Zone de droite, vide pour l'instant -->
         </div>
     </div>
     <script src="js/flag_script.js"></script> 

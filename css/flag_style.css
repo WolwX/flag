@@ -1,3 +1,56 @@
+/* Conteneur principal en deux colonnes */
+.bsod-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+.bsod-box-left {
+    width: 50vw;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.bsod-box-right {
+    width: 50vw;
+    min-width: 200px;
+    /* Pour l'instant vide, prêt à accueillir du contenu */
+}
+.footer-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    white-space: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.completion-text {
+    flex-shrink: 0;
+}
+/* Bloc principal pour le message centré et limité à la moitié de l'écran */
+.main-message {
+    max-width: 50vw;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+.main-message p {
+    font-size: 2vw;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: left;
+    word-break: break-word;
+}
+.main-message .secondary-message {
+    display: block;
+    font-size: 1.2vw;
+    font-weight: 300;
+    margin-top: 1vw;
+}
 #custom-message {
     margin-bottom: 0.7vw;
 }
@@ -21,12 +74,33 @@
 }
 
 .completion-text {
-    font-size: 1.05vw;
+    font-size: 1.575vw;
     font-weight: normal;
     color: #fff;
     margin: 0;
     text-align: left;
     white-space: nowrap;
+}
+
+.footer-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 0.5vw;
+    margin-bottom: 0;
+    gap: 1.5vw;
+}
+.footer-left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.footer-right {
+    flex: 1 1 50%;
+    min-height: 60px;
+    /* Ajoute ici du contenu plus tard */
 }
 /* Ligne info-row en 2 colonnes : 100% achevés à gauche, QR code + texte à droite */
 .info-area {
@@ -35,7 +109,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 1.2vw;
+    margin-top: 0 !important;
     margin-bottom: 0;
 }
 
@@ -73,7 +147,7 @@ body {
 .smiley {
     font-size: 8vw;
     font-weight: 200;
-    margin-bottom: 2vw;
+    margin-bottom: 0;
     color: #fff;
     user-select: none;
     text-align: left;
@@ -115,7 +189,8 @@ h1 {
 /* Champ de saisie */
 #codeInput {
     padding: 10px;
-    width: 220px;
+    width: 180px;
+    max-width: 30vw;
     border: none;
     border-radius: 4px;
     font-size: 1.1vw;
@@ -156,12 +231,12 @@ button:hover {
 }
 
 .qr-code {
-    width: 7vw;
-    height: 7vw;
-    min-width: 90px;
-    min-height: 90px;
-    max-width: 120px;
-    max-height: 120px;
+    width: 9.1vw;
+    height: 9.1vw;
+    min-width: 117px;
+    min-height: 117px;
+    max-width: 156px;
+    max-height: 156px;
     margin-right: 0;
     flex-shrink: 0;
     border-radius: 0;
@@ -177,7 +252,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: -5vw;
+    margin-left: -2.5vw;
     color: #fff;
 }
 
